@@ -1,0 +1,4 @@
+This folder contains my files for modules and packages demonstration
+
+Instructor
+Anmar Jarjees
