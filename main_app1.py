@@ -11,49 +11,96 @@
 # It's just different method of accessing our module, or how are we going to call it
 # it's a matter of personal preference
 
-# First Way: import module as namespace:
-# **************************************
-# using import python file name (no extension)
-# below we are importing "helpers" which the file that contains our function(s)
+
+# First Way: from the module importing specific function(s)
+# ********************************************************
+# Example: from module_name import function_name
+# below we are importing ONLY display from the "helpers_module" which is the file that contains our function(s)
+
+# Way1: import module as namespace:
+# below we are importing just this specific function "display" from our helpers_module.py file
 from helpers_module import display
-from helpers_module import *
-import helpers_module
-# so the import keyword will import all the functions inside helpers.py file
-# this file has 3 functions inside it
-# we need/have to write the file name then . then the function signature for every function we call
-helpers_module.display('Not a warning')
+# You can specify a list of functions using ,
+from helpers_module import display, number_total, number_avg
+# Instead of listing all your functions as comma seprated values!
+# It's better to import them all using * as explained in the second way:
 
 # Second Way: import all (all the functions/code) into the current namespace (file) using the wildcard *:
-# **********************************************
-# using this way we don't need to specify the namespace "helpers" before our functions when we call them
-# we can call any function by writing the function name and it's arguments
-# so after importing everything, this will make everything in this module "helpers" become globally available
-# or in more technical, it will imported into the current namespace (file) which is "modules-pure"
-# so below we can just simply say/write display instead of "helpers.display()"
-# Very Important Note: In this way if we don't use/call all the functions and the variables we will receive a warning (Problem)!
-display('Not a warning')
+# *******************************************************************************************************
+# Way2: import module as namespace:
+from helpers_module import *
 
-# Third Way: import specific item(s) (specific functions) into current namespace
-# *******************************************************
-# below we are importing just this specific function "display" from our helpers.py file
-# You can specify a list of functions using ,
-# example of importing only tow functions: from helpers import display, course_deatails
-# this might be a good choice!
-display('Not a warning')
 
+# Third way: using just the import
+# ****************************************
+# the import keyword will import all the functions inside helpers_module.py file
+# this file has 4 functions inside it
+# we need/have to write the file name (specify the namespace)
+# then . then the function signature for every function we call
+# Way 3:
+# using import python file name (no extension)
+import helpers_module
+
+# Besides calling our own custom module file(s)
+# We can still use/call Python built-in modules
+# Example below, we calling the module named "statistics":
+# This module "statistics" provides functions for calculating mathematical statistics of numeric (Real-valued) data.
+import statistics
+# Or using this syntax:
+from statistics import mean
+
+# NOTE:
+# In the first or second way we DON'T need to specify the namespace "helpers_module"
+# before our functions when we call them
+# we can call any function by writing the function name and it's arguments only
+# These two ways: will make everything in this module "helpers_module" become globally available
+# In the third way, we do need to specify:
+# >> the "namespace" (module/python file name)
+# >> then dot notation
+# >> then function/varaible/class name
+# Example: helpers_module.display()
+
+# Now we can call all our functions:
+# calling our function display() without passing any argument
+# By default we will have:
+# message="Here is my default message"
+# is_raining=False
 # ******************************************************************************************************
-# Now we can call all our functions
 # calling my function dispaly() without passing anything (value), so python will use the default values:
 # message="Here is my default message"
 # is_raining=False
-display()  # Here is my default message
+
+# ONLY for the third way:
+# we need/have to write the file name then . then the function signature for every function we call
+helpers_module.display()  # Here is my default message
+# Very Important Note: In this way if we don't use/call all the functions and the variables
+# we will receive a warning (Problem)!
+
+
+helpers_module.display("It's fine")
+
+# Note to remember :-)
+# passing True => it's raining
+# the default value is false => not raining
+display("take your umbrella", True)
+
+
+print(helpers_module.my_text)
+print(my_text)
+
+my_list = [89, 78.67, 90, 78.54, 4, 3]
+# print("the total is: ", number)
+helpers_module.number_avg
+
 
 print("**************************************")
 display("Stay at home", True)  # Stay at home
 display("Don't go for walking today", True)  # Don't go for walking today
 display("Take a bus", True)  # Take a bus
-# You should stay at home and study python
+
+# You should stay at home and study python (Yes even if it's not raining)
 display("You should stay at home and study python", False)
+
 # Still you will have to stay at home
 display("Still you will have to stay at home")
 # Yes we can have this code!!! display(True,"Any text")
@@ -63,7 +110,8 @@ display("Stay inside", "raining")  # Stay inside
 # Notice that based on our function signature we need to specify our empty string
 # otherwise Python will assign the value of True to the function parameter "message"
 
-# Because we are passing one value, so python will take it and just assigned it to first parameter message
+# Because we are passing one value,
+# so python will take it and just assigned it to first parameter "message"
 display(True)  # message = True AND is_raining = False => output: True
 # the same is here also:
 display(False)  # output: Warning! Take your umbrella
@@ -108,3 +156,12 @@ my_exams = [90, 87, 91, 92, 88, 85]
 # avg (the mean):
 avg = number_total(my_exams) / len(my_exams)
 print("Average", avg)
+
+# Or just calling our average function!!
+print("Average", number_avg(my_exams))
+
+
+# Or just calling the mean() function from the statistics module (build-in module):
+print("Average", statistics.mean(my_exams))
+# OR:
+print("Average", mean(my_exams))

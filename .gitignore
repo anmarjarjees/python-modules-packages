@@ -1,4 +1,4 @@
 __pycache__/
 .vscode/
-# We need to ignore the vertual environment folder "my-ven"
+# We need to ignore the vertual environment folder "my-venv"
 my-venv/
