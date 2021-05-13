@@ -181,11 +181,11 @@ python -m venv env
 # NOTE: to uninstall any package =>> pip uninstall colorama
 
 
-# The text file: requirements.text:
+# The text file "requirements.text":
 # *********************************
 # To move the name of all our installed packages to this file (Creating/Updating the file):
 # >> pip freeze > requirements.txt
-# the command has two actions:
+# This command has two actions:
 # Action1: Create/Update a file with the name "requirements.txt"
 # Action2: Write all the installed packages for my current app/project
  
@@ -198,7 +198,7 @@ python -m venv env
 # From the full package of "colorama" we will just import two componets (classes): Fore and Back
 # Fore and Back are two classes and that's why they start with Capital Letters
 from colorama import Fore, Back
-# Error message the package in not installed :
+# Error message if the package is in not installed :
 # ModuleNotFoundError: No module named 'colorama'
 
 # Examples from the Colorama page:
