@@ -9,11 +9,10 @@ They're:
 - simply python files (with .py extension)
 - referenced by using the import statement. 
 
-|***:computer: Code Reference: ***|
+|***:computer: Code Reference***|
 |:---:|
-!***: 1- Code File: helpers_module.py***|
-|:---:|
-!***: 2- Code File: main_app1.py*****|
+|***1- Code File: helpers_module.py***|
+|***2- Code File: main_app1.py***|
 
 # Working with Packages:
 Packages: are modules published by other entities which you can incorporate into your projects. they are python file(s) written by other developers that we need to install first then we can import them later.
@@ -21,11 +20,10 @@ You can search for many packages using: Python Package Index => The link: https:
 
 **Note: you can type "cls" to clear the terminal window:**
 
-|***:computer: Code Reference: ***|
+|***:computer: Code Reference***|
 |:---:|
-!***: 1- Code File: helpers_module_package.py***|
-|:---:|
-!***: 2- Code File: main_app2.py*****|
+|***1- Code File: helpers_module_package.py***|
+|***2- Code File: main_app2.py***|
 
 ## Installing Packages:
 - To install any package we use a python tool named "pip",
