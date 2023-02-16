@@ -1,40 +1,42 @@
-# Modules allow you to store reusable blocks of code, such as functions, in separate files.
-# They're referenced by using the import statement.
-
-# *************************************************************************
+# *****************************************************************************
 # here is the file where we need to import the module into it:
-# If the module is the server so think about this file to act as the client
-# *************************************************************************
+# If the module is the "server" so think about this file to act as the "client"
+# *****************************************************************************
 
 # We have 3 different ways:
 # There is no performance difference in these ways (all the same) and no logical difference
 # It's just different method of accessing our module, or how are we going to call it
 # it's a matter of personal preference
 
-
-# First Way: from the module importing specific function(s)
-# ********************************************************
-# Example: from module_name import function_name
+# First Way: 
+# from the module, importing specific function(s)
+# ***********************************************
+# Syntax: from module_name import function_name
 # below we are importing ONLY display from the "helpers_module" which is the file that contains our function(s)
 
-# Way1: import module as namespace:
+# Way1: import module as namespace: 
+# NOTE: "namespace" is the module (python file) name which is "helpers_module" in this example
 # below we are importing just this specific function "display" from our helpers_module.py file
 from helpers_module import display
-# You can specify a list of functions using ,
+
+# You can specify a list of functions using the comma ","
 from helpers_module import display, number_total, number_avg
-# Instead of listing all your functions as comma seprated values!
+
+# Instead of listing all your functions as comma separated values!
 # It's better to import them all using * as explained in the second way:
 
-# Second Way: import all (all the functions/code) into the current namespace (file) using the wildcard *:
-# *******************************************************************************************************
+# Second Way: 
+# import all (all the functions/code) into the current namespace (file) using the wildcard *:
+# *******************************************************************************************
 # Way2: import module as namespace:
 from helpers_module import *
 
 
-# Third way: using just the import
-# ****************************************
-# the import keyword will import all the functions inside helpers_module.py file
-# this file has 4 functions inside it
+# Third way: 
+# using just the import
+# *********************
+# the "import" keyword will import all the functions inside "helpers_module.py" file
+# this file "helpers_module.py" has 4 functions inside it
 # we need/have to write the file name (specify the namespace)
 # then . then the function signature for every function we call
 # Way 3:
@@ -50,12 +52,17 @@ import statistics
 from statistics import mean
 
 # NOTE:
-# In the first or second way we DON'T need to specify the namespace "helpers_module"
+# In the "first" and "second" way:
+# ********************************
+# we DON'T need to specify the namespace "helpers_module"
 # before our functions when we call them
 # we can call any function by writing the function name and it's arguments only
 # These two ways: will make everything in this module "helpers_module" become globally available
-# In the third way, we do need to specify:
-# >> the "namespace" (module/python file name)
+
+# In the "third" way:
+# *******************
+# we Do need to specify the namespace "helpers_module"
+# >> the "namespace" is the module (python file) name
 # >> then dot notation
 # >> then function/varaible/class name
 # Example: helpers_module.display()
@@ -66,21 +73,20 @@ from statistics import mean
 # message="Here is my default message"
 # is_raining=False
 # ******************************************************************************************************
-# calling my function dispaly() without passing anything (value), so python will use the default values:
+# calling my function display() without passing anything (value), so python will use the default values:
 # message="Here is my default message"
 # is_raining=False
 
-# ONLY for the third way:
+# NOTE: ONLY for the "third" way:
 # we need/have to write the file name then . then the function signature for every function we call
 helpers_module.display()  # Here is my default message
 # Very Important Note: In this way if we don't use/call all the functions and the variables
 # we will receive a warning (Problem)!
 
-
 helpers_module.display("It's fine")
 
 # Note to remember :-)
-# passing True => it's raining
+# passing the boolean value "True" => it's raining
 # the default value is false => not raining
 display("take your umbrella", True)
 
@@ -118,7 +124,7 @@ display(False)  # output: Warning! Take your umbrella
 
 # To make sure that these boolean values: True or False
 # can go (assigned) to the second function parameter which is is_raining
-# we do need to pass something to to the first first parameter in our function:
+# we do need to pass something to to the first parameter in our function:
 # Below we are passing just an empty string to the function parameter message and True to is_raining
 # message will be "" empty string, nothing in between ""
 # is_raining will be "True"
@@ -132,14 +138,16 @@ display("", True)  # Warning! Take your umbrella
 # nothing just an empty line because we are passing empty string
 display("", False)
 
-display(None, False)  # None in Python is like Null in JavaScript # None
+display(None, False)  # the keyword "None" in Python is like "Null" in JavaScript
 
 display(123456789)  # yes I am passing here numbers instead of string => 123456789
 # have fun again by passing two numbers:
 display(100, 200)  # 100
 print("**************************************")
 
-course_deatails(20)  # Monday - Room#12 - 6:30 PM
+# If you can a function that not found,
+# you will receive this error: "function_name is not defined
+course_details(20)  # Monday - Room#12 - 6:30 PM
 
 my_list = [89, 78.67, 90, 78.54, 4, 3]
 # Because my function doesn't print and I want to print the total
@@ -149,7 +157,7 @@ print(number_total(my_list))  # None
 
 # Notice that below we also need to use/call this variable "my_text"
 # if we don't call it, we will receive this problem:
-# Unused import my_text from wildcard importpylint(unused-wildcard-import)
+# "my_text1" is not defined
 print(my_text)
 
 my_exams = [90, 87, 91, 92, 88, 85]

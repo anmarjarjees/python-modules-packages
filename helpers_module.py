@@ -1,10 +1,7 @@
 # Modules:
-# *******************************************************************************
+# *****************************************************
 # Here is my module (python file created/written by us)
-# Modules allow you to store reusable blocks of code, such as functions, in separate files.
-# They're referenced by using the import statement.
-# *************************************************************************************
-
+# *****************************************************
 
 # creating a module on our own project
 # Modules: are files with functions and other reusable blocks of code,
@@ -13,7 +10,7 @@
 
 # functions are useful for reuse and readability
 # we want to take a list of our functions and use them in our application
-# Or in different application
+# Or in other different applications
 # we can do it by utilizing Modules
 # and how can we import them into a separate projects is through the use of Packages
 
@@ -30,7 +27,7 @@
 # 2) is_raining: boolean either True (Yes) or False (No)
 
 # NOTE:
-# is_raning has a default value of "False" in case if we called this function without passsing any argument
+# is_raining has a default value of "False" in case if we called this function without passing any argument
 # which means if the user forgets to pass a value to it, its value will be "False"
 # also message has a default value of "Here is my default message"
 
@@ -49,19 +46,18 @@ def display(message="Here is my default message", is_raining=False):
 
 
 # Let's create another function:
-def course_deatails(age):
+def course_details(age):
     if age >= 18:
         print("Monday - Room#12 - 6:30 PM")
     else:
         print("Tuesday - Room#22 - 7:30 PM")
 
 
-# One more time our last function:
+# Let's create another function:
 # this function accepts a list (array) of numbers and returning the total value:
 # we want to run this function against an array (list) of numbers
 # we put a parameter named "number_list" to act as a place holder for the real list
 # You can thing about number_list as a "Local Variable" that ONLY belongs to our function
-
 def number_total(number_list):
     # using for loop with initial of total
     # number_list => a list that contains numeric values
@@ -80,31 +76,34 @@ def number_total(number_list):
     return total    # at the end of this function: return the final total
 
 
-# our last function to find/return the average (mean) of a list (array) of numbers:
+# Another function to find/return the average (mean) of a list (array) of numbers:
 def number_avg(number_list):
     # finding the total by calling our other function number_total():
     total = number_total(number_list)
     return total/len(number_list)
 
-
-# For next example
-# ***********************************************************************************************
-# Packages: are modules published by other entities which you can incorporate into your projects.
-# ***********************************************************************************************
-
+# our last function to find/return True if even number and False if odd:
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False
+    
+# we can access varaibles also:
+course = "Python"
 
 # ********************************************************************************
 # Just to review:
 # Notes about comment in Python:
 # Python only has one official way of doing comments and that is using #.
-# using """" is not considered to be full official comment
+# using """ is not considered to be full official comment!
 
 """
 Some people using this simple for writing multiple-lines of comments
 But it's just a string in Py!!!
 Py will read this string 
 
-Django Framework Developers, using this way of comments
+Django Framework Developers, using this way of comments also
 """
 # In JS, we have // for one line comment, and we /* */ for multiple-lines comment
 
@@ -119,6 +118,11 @@ line 4
 """
 print(my_text)
 
-
+# Modules can have classes
+# Notice there is no code block for this class, it's empty => using "pass"
 class Member():
+    pass
+
+# using "pass" with functions:
+def calculate_tax(price):
     pass
