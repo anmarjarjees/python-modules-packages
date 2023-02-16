@@ -210,10 +210,6 @@ To install all the listed packages from this file:
 - W3Schools
 - Please refer to my class materials and the pdf files for more details and explanations
 
-## Resources, References, and Credits:
-- [Object-oriented programming in Python](https://docs.microsoft.com/learn/modules/python-object-oriented-programming/?WT.mc_id=python-c9-niner)
-
-
 #### NOTE: You can open any link in a new tab using either of the following ways:
 - Hold down the CTRL Key in windows or the COMMAND key on Mac then click it
 - Right-click the link and choose to open the link in a new tab or new window from the context menu
