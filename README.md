@@ -77,11 +77,11 @@ Virtual Environment is nothing but a folder to isolate all the required packages
 - You will set up a virtual environment folder and activate it as explained later
 - You will install the package(s) inside the venv.
 
-To create a virtual environment, it has to be created inside the project root folder,
-**online syntax (MAC)=>> python -m venv <Virtual_Env_folder_name>**
-Use this syntax (PC-Windows):
-**=>> py -m venv <Virtual_Env_folder_name> (OR:) py -3 -m venv <Virtual_Env_folder_name>**
-By convension most Python developers will name it "venv" or sometimes "env"
+To create a virtual environment, it has to be created inside the project root folder,<br>
+**online syntax (MAC)=>> python -m venv <Virtual_Env_folder_name>**<br>
+Use this syntax (PC-Windows):<br>
+**=>> py -m venv <Virtual_Env_folder_name> (OR:) py -3 -m venv <Virtual_Env_folder_name>**<br>
+By convension most Python developers will name it "venv" or sometimes "env"<br>
 Yes, we can name it anything: my-venv or modules-packages-venv or m-p-env, etc..
 
 ### Virtual Environment Commands: 
