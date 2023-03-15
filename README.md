@@ -1,4 +1,5 @@
 # Python Modules and Packages Quick Demonstration
+A quick demonstration about installing packages using pip command within a virtual environment.
 
 ## About This Repo:
 Quick and Basic Demonstration About How to Use Modules and Packages in Python. For "Full-Stack Software Development (FSSD) Diploma" and "Computer Programming Diploma" Programs.
