@@ -89,7 +89,7 @@ def is_even(number):
     else:
         return False
     
-# we can access varaibles also:
+# we can access variables also:
 course = "Python"
 
 # ********************************************************************************

@@ -2,6 +2,8 @@
 # Part of my lecture in using Python with Google Excel API 
 # ********************************************************
 
+# Dear students, please refer to my PDF file "Google Excel API with Python" regarding this topic
+
 # Now We can import the entire gspread library so we can access any class or method within it:
 import gspread
 

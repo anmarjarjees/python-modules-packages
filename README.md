@@ -35,7 +35,7 @@ So let's take this example by installing ["colorama package"](https://pypi.org/p
 - Packages can be installed in two different ways (2 different modes):
   - >> globally (by default) => the installed package will be available and accessed by the current project
   or any other project you want to build later
-  - >> in isolation mode => the installed package will be available and access by the current project ONLY
+  - >> in isolation mode => the installed package will be available and accessed by the current project ONLY
 
 ## Packages and Virtual Environments:
 By Default, packages are installed "globally" if we just run the command: 
@@ -77,11 +77,13 @@ Virtual Environment is nothing but a folder to isolate all the required packages
 - You will set up a virtual environment folder and activate it as explained later
 - You will install the package(s) inside the venv.
 
-To create a virtual environment, it has to be created inside the project root folder,
-**online syntax (MAC)=>> python -m venv <Virtual_Env_folder_name>**
-Use this syntax (PC-Windows):
-**=>> py -m venv <Virtual_Env_folder_name> (OR:) py -3 -m venv <Virtual_Env_folder_name>**
-By convension most Python developers will name it "venv" or sometimes "env"
+To create a virtual environment, it has to be created inside the project root folder:
+- online syntax (MAC):
+  - **=>> python -m venv <Virtual_Env_folder_name>**
+  - OR:  **python3 -m venv <Virtual_Env_folder_name>**
+- Use this syntax (PC-Windows):
+  - **=>> py -m venv <Virtual_Env_folder_name> (OR:) py -3 -m venv <Virtual_Env_folder_name>**
+By convention most Python developers will name it "venv" or sometimes "env"
 Yes, we can name it anything: my-venv or modules-packages-venv or m-p-env, etc..
 
 ### Virtual Environment Commands: 
@@ -123,7 +125,7 @@ you can use File explorer in windows or mac to access your folder then you can r
 
 ## Step 2: Activate/Using the Virtual Environment 
 When it's the time to use the virtual environment, we do need (have) to activate this virtual environment:
-In Windows systems, two different locations:
+In "Windows" operating systems, two different locations:
   1) inside the command line prompt (cmd.exe) batch syntax =>> <venv_folder>\Scripts\Activate.bat
   2) inside the Windows Powershell (Or Your VS CODE Powershell):
     **Syntaxes:**
@@ -140,6 +142,8 @@ By the way, **we can exit/deactivate the venv with this syntax =>> deactivate**
 - for this project folder, you can also check the project path:
   - **(my-venv) PS D:\Your Full path\01.Python-Modules-Packages>**
 
+To activate the virtual environment in MAC:
+- source <venv_folder>/bin/activate
 
 ### Microsoft Windows Execution Policies
 If you activate a venv for the very first time in any Windows Computer, you might receive an error: 
@@ -156,7 +160,8 @@ This error or warning is because "Microsoft Execution Policies". Microsoft Windo
 - A command to change an execution policy can succeed but still not change the effective execution policy.
 
 ## Step 3: Installing the required package(s) in a virtual environment for your Application:
- We have two different ways to install packages (in local Vscode or Gitpod):
+We have two different ways to install packages (in local Vscode or Gitpod):
+
 ### First Way (First Step): Install an individual package (the basic standard official way)
 - If you are sure, that you only want to install one and only one package, you can install it individually:
 - You don't want to put on Github or you don't want to share it with other developers:
